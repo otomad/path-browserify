@@ -521,11 +521,11 @@ const posix: Path = {
 		return ret;
 	},
 
-	filenameWithoutExtension(filePath) {
+	fileRoot(filePath) {
 		return posix.parse(filePath).name;
 	},
 
-	extnameWithoutDot(path) {
+	ext(path) {
 		let dotExt = posix.extname(path);
 		if (dotExt[0] === ".") dotExt = dotExt.slice(1);
 		return dotExt;

@@ -12,13 +12,22 @@
 	},
 	"bugs": "https://github.com/otomad/path-browserify/issues",
 	"scripts": {
-		"test": "tsx test"
+		"test": "tsx test",
+		"clear": "rimraf dist",
+		"build": "npm run clear && rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript",
+		"build-tsc": "npm run clear && tsc --build && copyfiles -u 1 \"./*.d.ts\" dist/types"
 	},
 	"devDependencies": {
+		"@rollup/plugin-typescript": "^12.1.1",
 		"@types/node": "^22.10.1",
 		"@types/tape": "^5.6.5",
+		"copyfiles": "^2.4.1",
 		"prettier": "^3.4.2",
+		"rimraf": "^6.0.1",
+		"rollup": "^4.28.1",
+		"rollup-plugin-dts": "^6.1.1",
 		"tape": "^4.9.0",
+		"tslib": "^2.8.1",
 		"typescript": "^5.7.2"
 	},
 	"homepage": "https://github.com/otomad/path-browserify",

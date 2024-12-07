@@ -122,14 +122,14 @@ export interface Path {
 	 * @param filePath - File name or file path.
 	 * @returns Pure file name.
 	 */
-	filenameWithoutExtension(filePath: string): string;
+	fileRoot(filePath: string): string;
 	/**
-	 * Return the file extension name but without the first dot.
+	 * Return the file extension name but without the leading dot.
 	 *
 	 * @param path - the path to evaluate.
 	 * @throws {TypeError} if `path` is not a string.
 	 */
-	extnameWithoutDot(path: string): string;
+	ext(path: string): string;
 
 	/**
 	 * The platform-specific file separator. '\\' or '/'.

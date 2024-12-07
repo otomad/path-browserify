@@ -7,4 +7,4 @@ import "./test-path-join";
 import "./test-path-relative";
 import "./test-path-resolve";
 import "./test-path-zero-length-strings";
-import "./test-path-filename-without-extension";
+import "./test-path-fileroot-ext";
