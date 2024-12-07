@@ -1,30 +1,29 @@
 {
-  "name": "path-browserify",
-  "description": "the path module from node core for browsers",
-  "version": "1.0.1",
-  "author": {
-    "name": "James Halliday",
-    "email": "mail@substack.net",
-    "url": "http://substack.net"
-  },
-  "bugs": "https://github.com/browserify/path-browserify/issues",
-  "dependencies": {},
-  "devDependencies": {
-    "tape": "^4.9.0"
-  },
-  "homepage": "https://github.com/browserify/path-browserify",
-  "keywords": [
-    "browser",
-    "browserify",
-    "path"
-  ],
-  "license": "MIT",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/browserify/path-browserify.git"
-  },
-  "scripts": {
-    "test": "node test"
-  }
+	"name": "path-browserify-es",
+	"description": "The path module from node core for browsers",
+	"version": "1.1.0",
+	"author": "lunate",
+	"license": "MIT",
+	"type": "module",
+	"main": "index.js",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/otomad/path-browserify.git"
+	},
+	"bugs": "https://github.com/otomad/path-browserify/issues",
+	"scripts": {
+		"test": "node test"
+	},
+	"devDependencies": {
+		"@types/node": "^22.10.1",
+		"prettier": "^3.4.2",
+		"tape": "^4.9.0",
+		"typescript": "^5.7.2"
+	},
+	"homepage": "https://github.com/otomad/path-browserify",
+	"keywords": [
+		"browser",
+		"browserify",
+		"path"
+	]
 }
