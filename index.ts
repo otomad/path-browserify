@@ -13,6 +13,7 @@ export const {
 	format,
 	parse,
 	filenameWithoutExtension,
+	extnameWithoutDot,
 	sep,
 	delimiter,
 	win32,

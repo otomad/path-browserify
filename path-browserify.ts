@@ -30,6 +30,7 @@
 "use strict";
 
 import type { Path, PathObject } from "./interfaces";
+import type { Writeable } from "./type-helpers";
 
 /**
  * Assert path.
@@ -522,6 +523,12 @@ const posix: Path = {
 
 	filenameWithoutExtension(filePath) {
 		return posix.parse(filePath).name;
+	},
+
+	extnameWithoutDot(path) {
+		let dotExt = posix.extname(path);
+		if (dotExt[0] === ".") dotExt = dotExt.slice(1);
+		return dotExt;
 	},
 
 	sep: "/",
