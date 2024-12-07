@@ -5,7 +5,9 @@
 	"author": "lunate",
 	"license": "MIT",
 	"type": "module",
-	"main": "index.js",
+	"main": "dist/index.js",
+	"module": "dist/index.js",
+	"types": "dist/types/index.d.ts",
 	"repository": {
 		"type": "git",
 		"url": "git://github.com/otomad/path-browserify.git"
@@ -14,20 +16,16 @@
 	"scripts": {
 		"test": "tsx test",
 		"clear": "rimraf dist",
-		"build": "npm run clear && rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript",
-		"build-tsc": "npm run clear && tsc --build && copyfiles -u 1 \"./*.d.ts\" dist/types"
+		"build": "npm run clear && tsc --build && shx cp interfaces.d.ts dist/types && shx cp index.ts dist/types/index.d.ts",
+		"build-rollup": "npm run clear && rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript"
 	},
 	"devDependencies": {
-		"@rollup/plugin-typescript": "^12.1.1",
 		"@types/node": "^22.10.1",
 		"@types/tape": "^5.6.5",
-		"copyfiles": "^2.4.1",
 		"prettier": "^3.4.2",
 		"rimraf": "^6.0.1",
-		"rollup": "^4.28.1",
-		"rollup-plugin-dts": "^6.1.1",
+		"shx": "^0.3.4",
 		"tape": "^4.9.0",
-		"tslib": "^2.8.1",
 		"typescript": "^5.7.2"
 	},
 	"homepage": "https://github.com/otomad/path-browserify",
@@ -35,5 +33,9 @@
 		"browser",
 		"browserify",
 		"path"
+	],
+	"files": [
+		"dist",
+		"!dist/tsconfig.tsbuildinfo"
 	]
 }

@@ -29,8 +29,8 @@
 
 "use strict";
 
-import type { Path, PathObject } from "./interfaces";
-import type { Writeable } from "./type-helpers";
+import type { Path, PathObject } from "./interfaces.js";
+import type { Writeable } from "./type-helpers.js";
 
 /**
  * Assert path.

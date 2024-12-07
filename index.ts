@@ -1,4 +1,5 @@
-import path from "./path-browserify";
+import path from "./path-browserify.js";
+import type { Path, PathObject } from "./interfaces.js";
 
 export default path;
 export const {
@@ -19,3 +20,4 @@ export const {
 	win32,
 	posix,
 } = path;
+export type { Path, PathObject } from "./interfaces.js";
